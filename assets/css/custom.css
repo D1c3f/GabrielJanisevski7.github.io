@@ -588,3 +588,143 @@ a:focus-visible, button:focus-visible {
     animation: none !important;
   }
 }
+
+
+/* ==============================================================
+   LD11 – JavaScript forma: išdėstymas, validacijos klaidos, rezultatai
+   ============================================================== */
+.contact .ld11-container .ld11-form,
+.contact .ld11-container .ld11-info,
+.contact .ld11-container .ld11-results {
+  background: #fff;
+  border: 1px solid #d5e5eb;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(25, 50, 77, .09);
+  padding: 28px;
+}
+
+.contact .ld11-container .ld11-form > h3 {
+  margin: 0 0 8px;
+}
+.contact .ld11-container .ld11-form > p {
+  margin-bottom: 22px;
+}
+
+.ld11-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+  row-gap: 14px;
+}
+.ld11-wide { grid-column: 1 / -1; }
+.ld11-field {
+  min-width: 0;
+}
+.ld11-field label {
+  display: block;
+  font-size: .94rem;
+  font-weight: 700;
+  color: #19324d;
+  margin-bottom: 7px;
+}
+.ld11-field label span {
+  color: #b12338;
+}
+.ld11-field input {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  min-height: 46px;
+  border: 1px solid #91b7c3;
+  border-radius: 11px;
+  background: #f9fcfe;
+  color: #19324d;
+  font-family: var(--default-font);
+  font-size: 1rem;
+  box-shadow: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.ld11-field input:focus {
+  outline: none;
+  border-color: #09667a;
+  box-shadow: 0 0 0 3px rgba(9,102,122,.15);
+}
+.ld11-field input.ld11-invalid {
+  border: 2px solid #b12338;
+  background: #fff7f8;
+}
+.ld11-field input.ld11-invalid:focus {
+  box-shadow: 0 0 0 3px rgba(177,35,56,.14);
+}
+.ld11-error {
+  display: block;
+  color: #a01e34;
+  font-size: .82rem;
+  line-height: 1.4;
+  margin-top: 5px;
+  min-height: 1.15em;
+}
+.ld11-ratings-title {
+  font-size: 1.15rem;
+  margin: 15px 0;
+}
+.ld11-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-top: 23px;
+}
+.contact #ld11-submit:disabled,
+.contact #ld11-submit:disabled:hover {
+  background: #dde5e9;
+  color: #384c59;
+  border-color: #abbec8;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+  opacity: 1;
+}
+.contact #ld11-clear,
+.contact #ld11-clear:hover {
+  background-color: #f2f7fa;
+  border-color: #6f9ca9;
+  color: #19324d;
+}
+.contact #ld11-clear:hover {
+  background-color: #e1eff4;
+}
+.ld11-footnote {
+  font-size: .86rem;
+  line-height: 1.5;
+  margin: 17px 0 0 !important;
+  color: #435569;
+}
+.contact .ld11-container .ld11-results {
+  margin-top: 22px;
+  border-left: 5px solid #09667a;
+}
+.ld11-results[hidden] { display: none !important; }
+.ld11-results h3 { margin-bottom: 18px; }
+.ld11-result-line {
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+.ld11-average {
+  margin: 18px 0 0;
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: #e5f4f8;
+  color: #19324d;
+  font-weight: 750;
+}
+.ld11-info p { overflow-wrap: anywhere; }
+.ld11-info code { color: #09667a; }
+
+@media (max-width: 767px) {
+  .ld11-form-grid { grid-template-columns: 1fr; }
+  .ld11-wide { grid-column: auto; }
+  .contact .ld11-container .ld11-form,
+  .contact .ld11-container .ld11-info,
+  .contact .ld11-container .ld11-results { padding: 20px; }
+}
