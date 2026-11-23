@@ -47,6 +47,7 @@
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Pagrindinis</span></a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i><span>Apie</span></a></li>
+        <li><a href="#competences"><i class="bi bi-columns-gap navicon"></i><span>Kompetencijos</span></a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Patirtis</span></a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfelis</span></a></li>
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Paslaugos</span></a></li>
@@ -151,6 +152,98 @@
     </div>
   </div>
 </section><!-- /Skills Section -->
+
+
+<!-- LD12: Kompetencijų pažangos modulis -->
+<section id="competences" class="ld12-section section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Kompetencijų pažanga</h2>
+    <p>Interaktyvi įgūdžių lenta: būsenos, patirties taškai, lygiai ir pasiekimai.</p>
+  </div>
+  <div class="container">
+    <div class="ld12-overview">
+      <div class="ld12-avatar-wrap">
+        <img id="ld12-avatar" src="assets/img/avatar-level-1.svg"
+             alt="Programuotojo personažas – 1 lygis" width="170" height="195">
+      </div>
+      <div>
+        <span class="ld12-eyebrow">Mano pažanga</span>
+        <div class="ld12-xp-display">
+          <strong id="ld12-xp">0</strong>
+          <small>/ <span id="ld12-max-xp">420</span> XP</small>
+        </div>
+        <p class="ld12-level-line">
+          Lygis <span id="ld12-level">1</span> –
+          <span id="ld12-rank">Pradedantysis</span>
+        </p>
+        <div class="ld12-track" role="progressbar"
+             aria-label="Progresas iki kito lygio"
+             aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div id="ld12-progress-bar"></div>
+        </div>
+        <p id="ld12-progress-text">Skaičiuojama...</p>
+        <p class="ld12-explain mb-0">
+          1 lygis: 0–49 XP · 2 lygis: 50–149 XP ·
+          3 lygis: 150–299 XP · 4 lygis: nuo 300 XP.
+        </p>
+      </div>
+    </div>
+
+    <div class="ld12-stats" aria-label="Įgūdžių statistika">
+      <div class="ld12-stat"><strong id="ld12-total">8</strong><span>Iš viso įgūdžių</span></div>
+      <div class="ld12-stat"><strong id="ld12-completed">0</strong><span>Atliktų įgūdžių</span></div>
+      <div class="ld12-stat"><strong id="ld12-percent">0%</strong><span>Atlikta procentais</span></div>
+    </div>
+
+    <h3 class="ld12-subheading">Įgūdžių Kanban lenta</h3>
+    <p class="ld12-explain">Keiskite kiekvienos kortelės būseną. Tik „Atlikta“ būsenoje esantys
+      įgūdžiai prideda XP. Pakeitimai automatiškai išsaugomi šiame naršyklės įrenginyje.</p>
+
+    <div class="row gy-3">
+      <div class="col-lg-4">
+        <div class="ld12-column ld12-column--planned">
+          <h3>Planuojama <span id="ld12-planned-count" class="ld12-count">0</span></h3>
+          <div id="ld12-planned" class="ld12-card-list" aria-label="Planuojami įgūdžiai"></div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="ld12-column ld12-column--learning">
+          <h3>Mokomasi <span id="ld12-learning-count" class="ld12-count">0</span></h3>
+          <div id="ld12-learning" class="ld12-card-list" aria-label="Mokomi įgūdžiai"></div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="ld12-column ld12-column--done">
+          <h3>Atlikta <span id="ld12-done-count" class="ld12-count">0</span></h3>
+          <div id="ld12-done" class="ld12-card-list" aria-label="Atlikti įgūdžiai"></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="ld12-subheading mt-4">Pasiekimai</h3>
+    <div class="ld12-achievements">
+      <article id="ld12-achievement-discoverer" class="ld12-achievement ld12-locked">
+        <div class="ld12-achievement-icon" aria-hidden="true">🔎</div>
+        <h4>Įgūdžių atradėjas</h4>
+        <p>Atliktas bent 1 įgūdis.</p>
+        <span class="ld12-achievement-state">Neatrakinta</span>
+      </article>
+      <article id="ld12-achievement-master" class="ld12-achievement ld12-locked">
+        <div class="ld12-achievement-icon" aria-hidden="true">🏅</div>
+        <h4>Įgūdžių meistras</h4>
+        <p>Atlikti bent 4 įgūdžiai.</p>
+        <span class="ld12-achievement-state">Neatrakinta</span>
+      </article>
+      <article id="ld12-achievement-expert" class="ld12-achievement ld12-locked">
+        <div class="ld12-achievement-icon" aria-hidden="true">🏆</div>
+        <h4>Įgūdžių ekspertas</h4>
+        <p>Pasiektas 4 lygis (nuo 300 XP).</p>
+        <span class="ld12-achievement-state">Neatrakinta</span>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- /LD12 Kompetencijų pažanga -->
 
     <!-- Resume Section -->
     
@@ -451,6 +544,7 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/skills.js"></script>
 
 </body>
 

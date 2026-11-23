@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-label="Programuotojo personažas, 1 lygis: Pradedantysis">
+  <title>Pradedantysis</title>
+  <rect width="240" height="260" rx="24" fill="#d9eff7"/>
+  <circle cx="120" cy="132" r="100" fill="#ffffff" opacity="0.62"/>
+  <path d="M34 260c8-49 28-72 62-79l24 12 25-12c35 7 57 34 62 79" fill="#64748b"/>
+  <path d="M104 171v32c5 12 27 12 32 0v-32" fill="#d99665"/>
+  <circle cx="77" cy="126" r="13" fill="#e6af84"/>
+  <circle cx="163" cy="126" r="13" fill="#e6af84"/>
+  <ellipse cx="120" cy="128" rx="51" ry="62" fill="#efba90"/>
+  <path d="M68 118c-2-46 18-68 52-68 34 0 53 22 51 68l-10-12c-6-22-18-26-30-25-19 18-35 21-55 18z" fill="#493b38"/>
+  <path d="M78 104c18-6 31-15 40-29 23 5 34 6 47 18" fill="none" stroke="#322c2d" stroke-width="7" stroke-linecap="round"/>
+  <path d="M95 122l14-2m22 0 14 2" stroke="#503b31" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="101" cy="131" rx="4" ry="5" fill="#2e3744"/>
+  <ellipse cx="139" cy="131" rx="4" ry="5" fill="#2e3744"/>
+  <path d="M120 132l-5 15 8 2" fill="none" stroke="#bf815e" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M106 162q14 9 28 0" fill="none" stroke="#925c4d" stroke-width="3" stroke-linecap="round"/>
+  <path d="M96 215h48" stroke="#e3f0f5" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="200" cy="40" r="20" fill="#fff" stroke="#64748b" stroke-width="2"/>
+  <text x="200" y="47" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#64748b">1</text>
+</svg>
