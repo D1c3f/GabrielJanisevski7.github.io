@@ -376,3 +376,210 @@ a:focus-visible, button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .portfolio .matlab-work, #scroll-top, .btn, button { transition: none !important; }
 }
+
+
+/* =============================================================
+   LD10 – CSS animacijos ir dekoratyviniai objektai (2026)
+   Visos naujos animacijos aprašytos šiame custom.css faile.
+   ============================================================= */
+
+/* 1. Nauja animacija Nr. 1: socialinio tinklo ikona.
+   5 būsenos; keičiasi transform, background-color, box-shadow. */
+.hero .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-top: 10px;
+  color: #fff;
+  background-color: #09667a;
+  border-radius: 17px;
+  box-shadow: 0 5px 14px rgba(9, 102, 122, 0.20);
+  animation: ld10-social-motion 4.5s ease-in-out infinite;
+}
+.hero .social-links a:hover {
+  color: #fff;
+  animation-play-state: paused;
+  text-decoration: none;
+}
+@keyframes ld10-social-motion {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    background-color: #09667a;
+    box-shadow: 0 5px 14px rgba(9, 102, 122, 0.20);
+  }
+  25% {
+    transform: translateY(-6px) rotate(-7deg) scale(1.06);
+    background-color: #0e7c91;
+    box-shadow: 0 11px 20px rgba(9, 102, 122, 0.28);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg) scale(1.10);
+    background-color: #134d71;
+    box-shadow: 0 14px 24px rgba(19, 77, 113, 0.30);
+  }
+  75% {
+    transform: translateY(-4px) rotate(7deg) scale(1.04);
+    background-color: #0e7c91;
+    box-shadow: 0 9px 17px rgba(9, 102, 122, 0.26);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    background-color: #09667a;
+    box-shadow: 0 5px 14px rgba(9, 102, 122, 0.20);
+  }
+}
+
+/* 1 ir 3. Naujos animacijos Nr. 2–3: antraščių pseudo-elementai.
+   ::before ir ::after jau egzistavo šablone, tačiau jų
+   animacijos sukurtos naujai ir be papildomų HTML elementų. */
+.section-title h2::before {
+  height: 2px;
+  background: linear-gradient(90deg, #8cb9c8 0%, #0c7184 45%, #d0e9ef 60%, #8cb9c8 100%);
+  background-size: 220% 100%;
+  animation: ld10-heading-line 5s linear infinite;
+}
+.section-title h2::after {
+  width: 78px;
+  height: 5px;
+  border-radius: 8px;
+  background: #09667a;
+  transform-origin: center;
+  animation: ld10-heading-accent 3.4s ease-in-out infinite;
+}
+@keyframes ld10-heading-line {
+  0% { background-position: 0% 50%; opacity: 0.68; }
+  50% { background-position: 100% 50%; opacity: 1; }
+  100% { background-position: 0% 50%; opacity: 0.68; }
+}
+@keyframes ld10-heading-accent {
+  0% { transform: scaleX(.76); opacity: .8; }
+  50% { transform: scaleX(1.12); opacity: 1; }
+  100% { transform: scaleX(.76); opacity: .8; }
+}
+
+/* 2. Tik CSS besisukantis krovimo indikatorius „Paslaugos“ */
+.services .ld10-loading-demo {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 18px 0 36px;
+  padding: 15px 21px;
+  background: rgba(255, 255, 255, .94);
+  border: 1px solid #b9dce5;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(25, 50, 77, .09);
+  color: #19324d;
+  font-weight: 650;
+}
+.services .ld10-spinner {
+  display: inline-block;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border: 4px solid #c8e3ea;
+  border-top-color: #09667a;
+  border-right-color: #207d92;
+  border-radius: 50%;
+  animation: ld10-spinner-spin 1.05s linear infinite;
+}
+@keyframes ld10-spinner-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Papildoma užduotis 1: judantis švelnus gradientas „Paslaugos“ */
+.services.section {
+  background: linear-gradient(
+    115deg,
+    #f4fbfd 0%,
+    #e8f5fa 28%,
+    #f3f0fb 52%,
+    #eaf9f5 76%,
+    #f4fbfd 100%
+  );
+  background-size: 300% 300%;
+  animation: ld10-services-gradient 18s ease-in-out infinite;
+}
+@keyframes ld10-services-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Papildoma užduotis 2: 2 CSS figūros skiltyje „Apie“.
+   Apskritimas (::before) ir trikampis (::after) nupiešti CSS;
+   jų judėjimas nepaveikia įprasto dokumento išdėstymo. */
+.about > .container > .row.gy-4.justify-content-center {
+  position: relative;
+  isolation: isolate;
+}
+.about > .container > .row.gy-4.justify-content-center > .col-lg-4,
+.about > .container > .row.gy-4.justify-content-center > .col-lg-8 {
+  position: relative;
+  z-index: 1;
+}
+.about > .container > .row.gy-4.justify-content-center::before,
+.about > .container > .row.gy-4.justify-content-center::after {
+  content: "";
+  display: block;
+  position: absolute;
+  flex: none;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.about > .container > .row.gy-4.justify-content-center::before {
+  width: 88px;
+  height: 88px;
+  top: -32px;
+  right: -27px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 33% 28%, #7cd9e4, #09667a);
+  box-shadow: 0 8px 24px rgba(9, 102, 122, .17);
+  animation: ld10-about-circle 5.8s ease-in-out infinite;
+}
+.about > .container > .row.gy-4.justify-content-center::after {
+  width: 72px;
+  height: 72px;
+  bottom: -31px;
+  left: -18px;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  background: linear-gradient(135deg, #74c4d6, #6e87c7);
+  filter: drop-shadow(0 5px 5px rgba(25, 50, 77, .14));
+  animation: ld10-about-triangle 7.5s ease-in-out infinite;
+}
+@keyframes ld10-about-circle {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-13px) scale(1.12); }
+}
+@keyframes ld10-about-triangle {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(12px) rotate(18deg); }
+}
+
+/* Prisitaikymas prie mažų ekranų ir judesio sumažinimo nuostatų. */
+@media (max-width: 767px) {
+  .about > .container > .row.gy-4.justify-content-center::before {
+    width: 50px; height: 50px; top: -12px; right: 0;
+  }
+  .about > .container > .row.gy-4.justify-content-center::after {
+    width: 45px; height: 45px; bottom: -14px; left: 0;
+  }
+  .services .ld10-loading-demo { font-size: .9rem; padding: 12px 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero .social-links a,
+  .section-title h2::before,
+  .section-title h2::after,
+  .services .ld10-spinner,
+  .services.section,
+  .about > .container > .row.gy-4.justify-content-center::before,
+  .about > .container > .row.gy-4.justify-content-center::after {
+    animation: none !important;
+  }
+}
