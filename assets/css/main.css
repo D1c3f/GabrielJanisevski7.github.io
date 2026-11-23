@@ -1457,3 +1457,24 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+/* LD8: MATLAB portfolio and media presentation */
+.portfolio .matlab-work {
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.portfolio .matlab-work:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+.portfolio .matlab-work .card-img-top {
+  display:block; width:100%; aspect-ratio:16/10;
+  object-fit:contain; background:#202020;
+}
+.portfolio .matlab-work .card-body { padding:20px; }
+.services .media-record {
+  display:block; width:100%; max-width:700px;
+  height:auto; border-radius:8px; overflow:hidden;
+}
